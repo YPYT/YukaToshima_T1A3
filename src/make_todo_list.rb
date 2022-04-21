@@ -1,6 +1,6 @@
 require 'colorize'
 require 'tty-box'
-require 'tty-font'
+
 
 
 class ToDoListApp
