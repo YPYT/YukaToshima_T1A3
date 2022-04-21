@@ -36,28 +36,25 @@ class ToDoListApp
     end   
    
     def feedback
-
-        puts "How many tasks have you completed? Answer as a number. e.g: 2".colorize(:background => :blue)
-        num_complete = $stdin.gets.chomp.to_i
-        left_num_task = @tasks.length - num_complete
-       
-        if num_complete == @tasks.length
-            
-            puts "Feedback: Completed all the tasks!".colorize(:yellow)
-            
-            puts " "
-        elsif    1 <= left_num_task
-            
-            puts "Feedback: You completed #{num_complete} tasks, and have #{left_num_task} more tasks!".colorize(:light_blue)
-            
-            puts " "
-        else
-            
-            puts "Error".colorize(:red)
-            
-            puts " "
+        puts 'How many tasks have you completed? Answer as a number. e.g: 2'
+        num = 0
+          
+        loop do
+        get_num = $stdin.gets.chomp
+        num = get_num.to_i
+        
+        break if get_num =~ (/^[0-9]+$/) && num <= @tasks.length
+        puts "please enter the right number"
         end
-    end
+    
+        left_tasks = @tasks.length - num
+    
+        if left_tasks == 0
+        puts "Feedback: Completed all the tasks!"
+        else
+        puts "Feedback: You completed #{num} tasks, and have #{left_tasks} more tasks!"
+        end
+      end
 
 end
    
