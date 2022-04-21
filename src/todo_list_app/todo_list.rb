@@ -23,10 +23,17 @@ class ToDoListApp
 
    
     def tasks
-        @tasks.each_with_index do |task,index|
-        puts "#{index + 1}: #{task}"
+        if @tasks.length >= 1
+            @tasks.each_with_index do |task,index|
+            puts "#{index + 1}: #{task}"
+            end
+            puts " "
+        else
+            puts "No tasks!! Add tasks in the command line!".colorize(:red)
+            puts " "
+            exit!
         end
-    end    
+    end   
    
     def feedback
         puts "How many tasks did you completed? Answere as a number. e.g: 2"
