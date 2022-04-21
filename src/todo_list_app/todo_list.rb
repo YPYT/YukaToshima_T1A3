@@ -36,25 +36,31 @@ class ToDoListApp
     end   
    
     def feedback
-        puts "How many tasks did you completed? Answere as a number. e.g: 2"
+        puts "How many tasks have you completed? Answer as a number. e.g: 2"
         num_complete = $stdin.gets.chomp.to_i
-        left_num_task = tasks.length - num_complete
+        left_num_task = @tasks.length - num_complete
        
         if num_complete == @tasks.length
+           
             puts "Feedback: Completed all the tasks!".colorize(:yellow)
+            
+            puts " "
         elsif    1 <= left_num_task
-            puts "Feedback: You completed #{num_complete} tasks, and have #{left_num_task} more tasks!".colorize(:green)
+            
+            puts "Feedback: You completed #{num_complete} tasks, and have #{left_num_task} more tasks!".colorize(:light_blue)
+            
+            puts " "
         else
+            
             puts "Error".colorize(:red)
+            
+            puts " "
         end
     end
+
 end
    
-   list = ToDoListApp.new
-   list.title_with_date
-   list.tasks
-#    list.feedback
-   
+
    
    
    
