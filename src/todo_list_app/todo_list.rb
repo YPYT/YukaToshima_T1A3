@@ -1,5 +1,4 @@
 require 'colorize'
-require 'tty-prompt'
 require 'tty-box'
 require 'tty-font'
 
