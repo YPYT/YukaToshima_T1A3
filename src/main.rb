@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'tty-font'
 require 'tty-prompt'
 require_relative './make_todo_list'
@@ -6,7 +7,7 @@ require_relative './make_todo_list'
 ### main menu ###
 
 font = TTY::Font.new(:doom)
-puts font.write("MENU", letter_spacing:1)
+puts font.write('MENU', letter_spacing: 1)
 
 ### ask the menu ###
 prompt = TTY::Prompt.new
@@ -17,7 +18,7 @@ loop do
     menu.choice 'Delete previous lists'
     menu.choice 'Exit'
   end
-### option ###
+  ### option ###
   case option
   when 'Make a To-Do List'
     list = ToDoListApp.new
@@ -27,7 +28,7 @@ loop do
     list.feedback
     # save the data to the text file
     old_stdout = $stdout
-    File.open('test.txt', 'a') do |fo|
+    File.open('todo.txt', 'a') do |fo|
       $stdout = fo
       # the data to be saved
       list.title_with_date
@@ -37,21 +38,21 @@ loop do
     $stdout = old_stdout
 
   when 'View previous lists'
-    file = File.open('test.txt') do |file|
-      file.each_line do |list|
-        puts list
+    File.open('todo.txt') do |file|
+      file.each_line do |lists|
+        puts lists
       end
     end
 
   when 'Delete previous lists'
     answer = prompt.yes?('Are you sure to delete previous list?')
     if answer == true
-      file = File.open('test.txt', 'w')
-      file.print('    ')
+      file_delete = File.open('todo.txt', 'w')
+      file_delete.print('    ')
       puts 'Your previous list has been deleted'
     end
 
   when 'Exit'
-    exit!(0)
+    exit!
   end
 end
