@@ -11,13 +11,13 @@ class ToDoListApp
     end
        
     def ask_date
-        puts "Enter the date what you want to execute the ToDo list. (e.g: 4th Apr, 23/5, 03/04, ...)"
+        puts "Enter the date what you want to execute the ToDo list. (e.g: 4th Apr, 23/5, 03/04, ...)".colorize(:background => :blue)
         @date = $stdin.gets.chomp
     end
        
     def title_with_date
         puts "--------------------"
-        puts "TODO DATE: #{@date}".colorize(:background => :blue)
+        puts "TODO DATE: #{@date}".colorize(:background => :yellow)
         puts "--------------------"
     end
 
@@ -36,12 +36,13 @@ class ToDoListApp
     end   
    
     def feedback
-        puts "How many tasks have you completed? Answer as a number. e.g: 2"
+
+        puts "How many tasks have you completed? Answer as a number. e.g: 2".colorize(:background => :blue)
         num_complete = $stdin.gets.chomp.to_i
         left_num_task = @tasks.length - num_complete
        
         if num_complete == @tasks.length
-           
+            
             puts "Feedback: Completed all the tasks!".colorize(:yellow)
             
             puts " "
