@@ -10,11 +10,14 @@ class ToDoListApp
         @tasks = ARGV
     end
        
-    def title_with_date
+    def ask_date
         puts "Enter the date what you want to execute the ToDo list. (e.g: 4th Apr, 23/5, 03/04, ...)"
         @date = $stdin.gets.chomp
+    end
+       
+    def title_with_date
         puts "--------------------"
-        puts "TODO DATE: #{@date}"
+        puts "TODO DATE: #{@date}".colorize(:background => :blue)
         puts "--------------------"
     end
 
