@@ -42,7 +42,7 @@ class ToDoListApp
       num = get_num.to_i
       break if get_num =~ (/^[0-9]+$/) && num <= @tasks.length
 
-      puts 'please enter the right number'.colorize(:red)
+      puts 'Please enter the right number'.colorize(:red)
     end
 
     left_tasks = @tasks.length - num

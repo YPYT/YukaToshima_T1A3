@@ -2,6 +2,7 @@
 
 require 'tty-font'
 require 'tty-prompt'
+require 'colorize'
 require_relative './make_todo_list'
 
 ### main menu ###
@@ -49,7 +50,7 @@ loop do
     if answer == true
       file_delete = File.open('todo.txt', 'w')
       file_delete.print('    ')
-      puts 'Your previous list has been deleted'
+      puts 'Your previous list has been deleted'.colorize(:red)
     end
 
   when 'Exit'
