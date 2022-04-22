@@ -17,7 +17,7 @@ class ToDoListApp
 
   def title_with_date
     puts '--------------------'
-    puts "TODO DATE: #{@date}".colorize(background: :yellow)
+    puts "TODO DATE: #{@date}".colorize(background: :green)
     puts '--------------------'
   end
 
