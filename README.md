@@ -12,9 +12,9 @@ You can also view your previous lists, and delete the lists if you require.
    
    The date obtained from the user will be displayed as follows.  
    ```
-   -----------
-   TODO: 4/24 
-   -----------
+   ----------------
+   TODO DATE: 4/24 
+   ----------------
    ```
 
 1. ### **Create tasks from the terminal command line and display them**  
@@ -33,7 +33,7 @@ You can also view your previous lists, and delete the lists if you require.
    If no tasks in the command line, the program will exit.  
    ```
    $ ruby main.rb
-   
+
    => No tasks!! Add tasks in the command line!
    ```
 
@@ -74,16 +74,43 @@ You can also view your previous lists, and delete the lists if you require.
    - [Ruby Style Guide](https://rubystyle.guide/)  
 
 ## **Implementation Plan**
+   To track the implementation plan, I used Trello.  
+   [Trello link](https://trello.com/invite/b/PGmgoJE3/8cb4f316075ff150ee4103dd9a5e37ab/develop-an-implementation-plan-t1a3)  
 
+   The trello board has devided into 4 sections 'Planning' 'Done' 'features' and 'Gems'. I moved the cards in the planning section to the Done section when I finished the plan.  
+   ![trello](./docs/screenshots_of_app/trello.png) 
+
+   Each feature of the application was broken down and written out on a checklist and checked off as it was implemented.  
+   ![checklist](./docs/screenshots_of_app/checklist.png)  
+
+   Each planning card has the due.  
+   ![due](./docs/screenshots_of_app/due.png)  
 
 
 ## **Help Documentation**
 
 - ### **System/hardware Requirements**
+   - macOS 
+     - Version 12.2.1 (21D62)
+     - Memory 8 GV
+
 
 - ### **Installation**
 
-- ### **How to use this app**
-
 - ### **Dependencies required by the application to operate**
 
+
+- ### **How to use this app**
+   This application use terminal command line arguments to make a todo list.  
+   When you go to your terminal command, run 
+   ```
+   ruby $ main.rb "your first task here" "your second task here" "your third task here"
+   ```
+   You can add your task as many as you want, but there are some rules to write your tasks.  
+   - Put a downcase white space after main.rb
+   - Enclose tasks in double quotation marks (")
+   - Put a downcase white space between the tasks  
+
+
+- ### **Reference**
+   
