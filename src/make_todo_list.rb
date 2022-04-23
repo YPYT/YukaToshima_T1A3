@@ -11,14 +11,18 @@ class ToDoListApp
   end
 
   def ask_date
-    puts 'Please enter a date for your todo list (4th May, 5月23日 etc)'.colorize(background: :blue)
+    puts puts 'Please enter a date for your todo list (4th May, 5月23日 etc)'.colorize(background: :blue)
     @date = $stdin.gets.chomp
+  rescue StandardError
+    puts 'Errors occurred.'.colorize(:red)
   end
 
   def title_with_date
     puts '--------------------'
-    puts "TODO DATE: #{@date}".colorize(background: :green)
+    puts "TODO DATE: #{@date}".colorize(background: :yellow)
     puts '--------------------'
+  rescue StandardError
+    puts 'Failed to read the date'.colorize(:red)
   end
 
   def tasks
@@ -32,25 +36,29 @@ class ToDoListApp
       puts ' '
       exit!
     end
+  rescue StandardError
+    puts 'An error has occurred'.colorize(:red)
   end
 
   def feedback
     puts 'How many tasks have you completed? Answer as a number. e.g: 2'.colorize(background: :blue)
     num = 0
+
     loop do
       get_num = $stdin.gets.chomp
       num = get_num.to_i
+
       break if get_num =~ (/^[0-9]+$/) && num <= @tasks.length
 
       puts 'Please enter the right number'.colorize(:red)
     end
 
     left_tasks = @tasks.length - num
+
     if left_tasks.zero?
       print TTY::Box.frame 'Feedback: Completed all the tasks!', align: :center
     else
-      print TTY::Box.frame "Feedback: You completed #{num} tasks, and have #{left_tasks} more tasks!",
-                           align: :center
+      print TTY::Box.frame "Feedback: You completed #{num} tasks, and have #{left_tasks} more tasks!", align: :center
     end
   end
 end
