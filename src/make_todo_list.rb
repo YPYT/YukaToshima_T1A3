@@ -27,8 +27,12 @@ class ToDoListApp
 
   def tasks
     if @tasks.length >= 1
-      @tasks.each_with_index do |task, index|
-        puts "#{index + 1}: #{task}"
+      begin
+        @tasks.each_with_index do |task, index|
+          puts "#{index + 1}: #{task}"
+        end
+      rescue StandardError
+        puts 'Failed to get arguments from the terminal command line.'.colorize(:red)
       end
       puts ' '
     else
@@ -36,8 +40,6 @@ class ToDoListApp
       puts ' '
       exit!
     end
-  rescue StandardError
-    puts 'An error has occurred'.colorize(:red)
   end
 
   def feedback
