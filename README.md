@@ -109,7 +109,7 @@ You can also view your previous lists, and delete the lists if you require.
    ```  
    Press Enter to create a local clone.  
  
-   3. Now you have application files in the directory. Move to "Terminal_App_todo_list" directory, then follow the "Dependencies required by the application to operate" below.     
+   3. Now you have application files in the directory. Move to "Terminal_App_todo_list" directory, then follow the "How to use this app" below.     
   　　  
   　　  
 - ### **Dependencies required by the application to operate**  
