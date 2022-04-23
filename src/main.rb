@@ -60,7 +60,7 @@ loop do
       begin
         file_delete = File.open('todo.txt', 'w')
         file_delete.print('    ')
-        puts 'Your previous list has been deleted'.colorize(:red)
+        puts 'Your previous list has been deleted'.colorize(:green)
       rescue StandardError
         puts 'Failed to delete data in text file.'
       end

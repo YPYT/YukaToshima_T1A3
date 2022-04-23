@@ -19,7 +19,7 @@ class ToDoListApp
 
   def title_with_date
     puts '--------------------'
-    puts "TODO DATE: #{@date}".colorize(background: :yellow)
+    puts "TODO DATE: #{@date}".colorize(background: :green)
     puts '--------------------'
   rescue StandardError
     puts 'Failed to read the date'.colorize(:red)
