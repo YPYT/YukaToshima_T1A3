@@ -15,8 +15,8 @@ prompt = TTY::Prompt.new
 loop do
   option = prompt.select('What would you like to do?') do |menu|
     menu.choice 'Make a To-Do List'
-    menu.choice 'View previous lists'
-    menu.choice 'Delete previous lists'
+    menu.choice 'View previous Lists'
+    menu.choice 'Delete previous Lists'
     menu.choice 'Exit'
   end
   ### option ###

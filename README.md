@@ -113,65 +113,24 @@ You can also view your previous lists, and delete the lists if you require.
   　　  
   　　  
 - ### **Dependencies required by the application to operate**  
-   This app require some gems, so make sure install these gems in the "Terminal_App_todo_list" directory before you start using.   
-   Move to "Terminal_App_todo_list" directory: execute  
-   ``` 
-   $ cd The_name_of_your_directory/Terminal_App_todo_list/
-   ```  
+   This app requires some gems.
+   
    - tty prompt  
      [tty-prompt GitHub link](https://github.com/piotrmurach/tty-prompt)  
-     *Installation*  
-     ```
-     $ gem install tty-prompt
-     ```  
+      
 
    - tty font  
      [tty-font GitHub link](https://github.com/piotrmurach/tty-font)  
-     *Installation*   
-     ```
-     $ gem install tty-font
-     ```  
+     
 
    - tty box  
      [tty-box GitHub link](https://github.com/piotrmurach/tty-box)
-     *Installation*  
-     ```
-     $ gem install tty-box  
-     ``` 
+    
 
    - colorize  
-     [colorize GitHub](https://github.com/fazibear/colorize)
-     *Installation*  
-     ```
-     $ gem install colorize
-     ```  
-     
-     **You can also install all the gems above by using bundler.(optional)**  
-     [bundler website link](https://bundler.io/)
-     
-     ``` 
-     $ gem install bundler
-     ```
-
-   - Make sure you have all the gem name in the Gemfile like below.  
-     ``` 
-     # frozen_string_literal: true
-
-     source 'https://rubygems.org'
-
-     # gem "rails"
-
-     gem 'colorize'
-     gem 'tty-box'
-     gem 'tty-font'
-     gem 'tty-prompt'
-     ``` 
-
-   - And then execute :
-     ```
-     $ bundle install 
-     ```
-
+     [colorize GitHub](https://github.com/fazibear/colorize)  
+   
+  
 - ### **How to use this app**  
    This application use terminal command line arguments to make a todo list.     
    Move to "Terminal_App_todo_list" directory.  
