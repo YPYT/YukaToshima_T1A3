@@ -28,29 +28,42 @@ loop do
     list.tasks
     list.feedback
     # save the data to the text file
-    old_stdout = $stdout
-    File.open('todo.txt', 'a') do |fo|
-      $stdout = fo
-      # the data to be saved
-      list.title_with_date
-      list.tasks
-      # ----
-    end
-    $stdout = old_stdout
-
-  when 'View previous lists'
-    File.open('todo.txt') do |file|
-      file.each_line do |lists|
-        puts lists
+    begin
+      old_stdout = $stdout
+      File.open('todo.txt', 'a') do |fo|
+        $stdout = fo
+        # the data to be saved
+        list.title_with_date
+        list.tasks
+        # ----
       end
+      $stdout = old_stdout
+    rescue StandardError
+      puts 'Failed to save the data to the text file.'
     end
 
-  when 'Delete previous lists'
+  when 'View previous Lists'
+    begin
+      File.open('todo.txt') do |file|
+        file.each_line do |lists|
+          puts lists
+        end
+      end
+    rescue StandardError
+      puts 'Failed to read the text file.'
+    end
+
+  when 'Delete previous Lists'
     answer = prompt.yes?('Are you sure to delete previous list?')
+
     if answer == true
-      file_delete = File.open('todo.txt', 'w')
-      file_delete.print('    ')
-      puts 'Your previous list has been deleted'.colorize(:red)
+      begin
+        file_delete = File.open('todo.txt', 'w')
+        file_delete.print('    ')
+        puts 'Your previous list has been deleted'.colorize(:red)
+      rescue StandardError
+        puts 'Failed to delete data in text file.'
+      end
     end
 
   when 'Exit'
