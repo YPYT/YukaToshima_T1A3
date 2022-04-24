@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     colorize (0.8.1)
+    date (3.2.2)
     pastel (0.8.0)
       tty-color (~> 0.5)
     strings (0.2.1)
@@ -33,6 +34,7 @@ PLATFORMS
 
 DEPENDENCIES
   colorize
+  date
   tty-box
   tty-font
   tty-prompt

@@ -2,6 +2,7 @@
 
 require 'colorize'
 require 'tty-box'
+require 'Date'
 
 # the ToDoListApp class is for the method to make a todo list #
 class ToDoListApp
@@ -11,18 +12,19 @@ class ToDoListApp
   end
 
   def ask_date
-    puts puts 'Please enter a date for your todo list (4th May, 5月23日 etc)'.colorize(background: :blue)
-    @date = $stdin.gets.chomp
+    puts 'Please enter a date for your todo list (4/23 etc)'.colorize(background: :blue)
+    @date = STDIN.gets.chomp
+    Date.parse(@date)
+
   rescue StandardError
-    puts 'Errors occurred.'.colorize(:red)
+    puts 'enter correct format'.colorize(:red)
+  retry
   end
 
   def title_with_date
     puts '--------------------'
     puts "TODO DATE: #{@date}".colorize(background: :green)
     puts '--------------------'
-  rescue StandardError
-    puts 'Failed to read the date'.colorize(:red)
   end
 
   def tasks
