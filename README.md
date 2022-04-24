@@ -6,9 +6,8 @@ You can also view your previous lists, and delete the lists if you require.
   
 ## **Features in this application**  
 
-1. ### **Displays the user's any date along with the title**  
-   Dates can be entered in any style you like.  
-   For example: `4/24`, `4th April`, `4月24日`, etc.  
+1. ### **Displays the date along with the title**  
+   For example: `4/24`, `4th April` etc.  
    
    The date obtained from the user will be displayed as follows.  
    ```
@@ -109,26 +108,79 @@ You can also view your previous lists, and delete the lists if you require.
    ```  
    Press Enter to create a local clone.  
  
-   3. Now you have application files in the directory. Move to "Terminal_App_todo_list" directory, then follow the "How to use this app" below.     
+   3. Now you have application files in the directory. Move to "Terminal_App_todo_list" directory, then follow the "Dependencies required by the application to operate" and "How to use this app" below.     
   　　  
   　　  
 - ### **Dependencies required by the application to operate**  
-   This app requires some gems.
-   
+    This app require some gems, so make sure install these gems in the "Terminal_App_todo_list" directory before you start using.   
+   Move to "Terminal_App_todo_list" directory: execute  
+   ``` 
+   $ cd The_name_of_your_directory/Terminal_App_todo_list/
+   ```  
    - tty prompt  
      [tty-prompt GitHub link](https://github.com/piotrmurach/tty-prompt)  
-      
+     *Installation*  
+     ```
+     $ gem install tty-prompt
+     ```  
 
    - tty font  
      [tty-font GitHub link](https://github.com/piotrmurach/tty-font)  
-     
+     *Installation*   
+     ```
+     $ gem install tty-font
+     ```  
 
    - tty box  
      [tty-box GitHub link](https://github.com/piotrmurach/tty-box)
-    
+     *Installation*  
+     ```
+     $ gem install tty-box  
+     ``` 
 
    - colorize  
-     [colorize GitHub](https://github.com/fazibear/colorize)  
+     [colorize GitHub](https://github.com/fazibear/colorize)
+     *Installation*  
+     ```
+     $ gem install colorize
+     ```  
+
+    - date  
+     [date GitHub](https://github.com/ruby/date/)  
+     *Installation*  
+     ```
+     $ gem install date
+     ```  
+       
+     **You can also install all the gems above by using bundler.(optional)**  
+     [bundler website link](https://bundler.io/)
+     
+     ``` 
+     $ gem install bundler
+     ```
+
+   - Make sure you have all the gem name in the Gemfile like below.  
+     ``` 
+     # frozen_string_literal: true
+
+     source 'https://rubygems.org'
+
+     # gem "rails"
+
+     gem 'colorize'
+     gem 'tty-box'
+     gem 'tty-font'
+     gem 'tty-prompt'
+     gem 'date  
+     ``` 
+
+   - And then execute :
+     ```
+     $ bundle install 
+     ``` 
+   
+   Now you installed all the gems that are used in this application.  
+  
    
   
 - ### **How to use this app**  
