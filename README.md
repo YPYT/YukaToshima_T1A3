@@ -83,7 +83,18 @@ You can also view your previous lists, and delete the lists if you require.
 
    Each planning card has the due.  
    ![due](./docs/screenshots_of_app/due.png)  
-  
+
+## walkthrough of the logic of the application
+The application walkthrough is below
+![walkthrough app](./docs/Terminal_app_walkthough.drawio.png)  
+[Here is a PDF: more details](./docs/logic%20walkthrough.pdf)  
+
+## Testing code  
+Tested for main feature of application.  
+![testing](./docs/Code%20Testing%20-%20Sheet1.pdf)  
+[link is here](https://docs.google.com/spreadsheets/d/1zceoLbKKy2O9MOsCldT-f53Qa1X0MbMjtCuqwKjNQXQ/edit?usp=sharing)
+
+
 
 ## **Help Documentation**  
 
