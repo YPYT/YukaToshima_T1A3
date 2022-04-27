@@ -144,14 +144,14 @@ Tested for main feature of application.
      ```  
 
    - tty box  
-     [tty-box GitHub link](https://github.com/piotrmurach/tty-box)
+     [tty-box GitHub link](https://github.com/piotrmurach/tty-box)  
      *Installation*  
      ```
      $ gem install tty-box  
      ``` 
 
    - colorize  
-     [colorize GitHub](https://github.com/fazibear/colorize)
+     [colorize GitHub](https://github.com/fazibear/colorize)  
      *Installation*  
      ```
      $ gem install colorize
@@ -164,8 +164,8 @@ Tested for main feature of application.
      $ gem install date
      ```  
        
-     **You can also install all the gems above by using bundler.(optional)**  
-     [bundler website link](https://bundler.io/)
+     **You can also install all the gems above by using bundler (recommend)**  
+     [bundler website link](https://bundler.io/)  
      
      ``` 
      $ gem install bundler
