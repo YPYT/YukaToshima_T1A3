@@ -13,12 +13,11 @@ class ToDoListApp
 
   def ask_date
     puts 'Please enter a date for your todo list (4/23 etc)'.colorize(background: :blue)
-    @date = STDIN.gets.chomp
+    @date = stdin.gets.chomp
     Date.parse(@date)
-
   rescue StandardError
     puts 'enter correct format'.colorize(:red)
-  retry
+    retry
   end
 
   def title_with_date
